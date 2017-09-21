@@ -1,6 +1,6 @@
 [General] 
 FullMachineName = {{ dirsrv_fqdn }}
-SuiteSpotUserID = {{ dirsrv_user }}
+SuiteSpotUserID = {{ dirsrv_user }}
 SuiteSpotGroup = {{ dirsrv_group }}
 AdminDomain = {{ dirsrv_admin_domain }}
 ConfigDirectoryAdminID = admin
