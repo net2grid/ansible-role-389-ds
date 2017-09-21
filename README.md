@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/CSCfi/ansible-role-389-ds.svg?branch=master)](https://travis-ci.org/CSCfi/ansible-role-389-ds)
-
 Ansible-Role: 389-ds
 =========
 
@@ -16,10 +14,10 @@ Role Variables
 See defaults/main.yml for the variables you can overwrite via role call as a parameter.
 
 * dirsrv_state: latest
-* dirsrv_password: PLEASE SET
+* dirsrv_password: not_set_yet
 * dirsrv_admin_password: ( Default: dirsrv_password )
 
-* dirsrv_fqdn: ( Default: ansible_fqdn, if ansible_fqdn fails or is wrong for you, set proper one )
+* dirsrv_fqdn: ( Default: ldap.local.dev )
 * dirsrv_suffix: ( Default: last two parts from dirsrv_fqdn )
 * dirsrv_hostname: ( Default: first part from dirsrv_fqdn )
 
@@ -33,4 +31,4 @@ Example Playbook
 
     - hosts: all
       roles:
-        - { role: CSCfi.389-ds }
+        - { role: net2grid.389-ds }
