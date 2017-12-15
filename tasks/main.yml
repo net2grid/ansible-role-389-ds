@@ -4,9 +4,8 @@
   yum: name=epel-release state=present
   when: ansible_os_family == "RedHat" or ansible_os_family == "Centos"
 
-
-- name: Make sure hostname and IP address are present in /etc/hosts
-  lineinfile: dest=/etc/hosts regexp="^{{ ansible_default_ipv4.address }}" line="{{ ansible_default_ipv4.address }} {{ dirsrv_fqdn }} {{ dirsrv_hostname }}"
+#- name: Make sure hostname and IP address are present in /etc/hosts
+#  lineinfile: dest=/etc/hosts regexp="^{{ ansible_default_ipv4.address }}" line="{{ ansible_default_ipv4.address }} {{ dirsrv_fqdn }} {{ dirsrv_hostname }}"
 
 - name: Initialize
   include_vars: "{{ item }}"
